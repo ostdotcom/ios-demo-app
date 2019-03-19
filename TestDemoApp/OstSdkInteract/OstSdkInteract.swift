@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import OstSdk
+import OstWalletSdk
 import MaterialComponents
 
 class OstSdkInteract: BaseModel, OstWorkFlowCallbackDelegate {

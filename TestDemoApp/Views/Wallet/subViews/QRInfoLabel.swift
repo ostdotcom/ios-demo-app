@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import OstSdk
+import OstWalletSdk
 
 class QRInfoLabel: UILabel {
 
@@ -35,7 +35,7 @@ class QRInfoLabel: UILabel {
     
     public func showUserInfo() {
         let currentUser = CurrentUser.getInstance();
-        let ostUser = try! OstSdk.getUser(currentUser.ostUserId!)
+        let ostUser = try! OstWalletSdk.getUser(currentUser.ostUserId!)
         let ostCurrentDevice = ostUser!.getCurrentDevice()
         
         self.numberOfLines = 0;

@@ -8,7 +8,7 @@
 
 import UIKit
 import MaterialComponents
-import OstSdk
+import OstWalletSdk
 
 class SetupWalletView: BaseWalletWorkflowView {
   
@@ -33,7 +33,7 @@ class SetupWalletView: BaseWalletWorkflowView {
     let spendingLimitInWei = String( "1000000000000000000000000" )
     //Logger.log(message: "spendingLimitInWei", parameterToPrint: spendingLimitInWei);
     
-    OstSdk.activateUser(userId: currentUser.ostUserId!,
+    OstWalletSdk.activateUser(userId: currentUser.ostUserId!,
                         userPin: pinNumberTextField.text!,
                         passphrasePrefix: currentUser.userPinSalt!,
                         spendingLimitInWei: spendingLimitInWei,

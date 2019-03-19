@@ -7,7 +7,7 @@
 //
 
 import Foundation;
-import OstSdk
+import OstWalletSdk
 class CurrentUser: BaseModel {
   
   static var sharedInstance:CurrentUser?;
@@ -125,7 +125,7 @@ class CurrentUser: BaseModel {
           self.currentDeviceAddress = userDevice.address;
           self.userDevice = userDevice;
           do {
-            try self.ostUser = OstSdk.getUser(self.ostUserId!);
+            try self.ostUser = OstWalletSdk.getUser(self.ostUserId!);
             print("onSuccess triggered for ", eventType);
             onSuccess(self.ostUser!, self.userDevice!);
           } catch {
@@ -139,7 +139,10 @@ class CurrentUser: BaseModel {
       }
     }
     
-    OstSdk.setupDevice(userId: self.ostUserId!, tokenId: self.tokenId!, forceSync:true, delegate: ostSdkInteract);
+    OstWalletSdk.setupDevice(userId: self.ostUserId!,
+                             tokenId: self.tokenId!,
+                             forceSync:true,
+                             delegate: ostSdkInteract);
   }
 //
 //  func registerDevice(_ apiParams: [String : Any], delegate ostDeviceRegisteredProtocol: OstDeviceRegisteredProtocol) {

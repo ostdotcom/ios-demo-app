@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import OstSdk
+import OstWalletSdk
 
 class BaseWalletWorkflowView: BaseWalletView {
 

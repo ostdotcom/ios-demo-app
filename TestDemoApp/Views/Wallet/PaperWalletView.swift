@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import OstSdk
+import OstWalletSdk
 import MaterialComponents
 class PaperWalletView: BaseWalletWorkflowView {
 
@@ -21,7 +21,8 @@ class PaperWalletView: BaseWalletWorkflowView {
   @objc override func didTapNext(sender: Any) {
     super.didTapNext(sender: sender);
     let currentUser = CurrentUser.getInstance();
-    OstSdk.getPaperWallet(userId: currentUser.ostUserId!, delegate: self.sdkInteract);
+    OstWalletSdk.getPaperWallet(userId: currentUser.ostUserId!,
+                                delegate: self.sdkInteract);
   }
   // Mark - Sub Views
   let logoImageView: UIImageView = {

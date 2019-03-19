@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import OstSdk
+import OstWalletSdk
 
 class RecoverDeviceView: AddSessionView {
     @objc override func didTapNext(sender: Any) {
@@ -19,7 +19,7 @@ class RecoverDeviceView: AddSessionView {
     
     func recoverDevice() {
         let currentUser = CurrentUser.getInstance()
-        OstSdk.initializeRecoverDevice(
+        OstWalletSdk.initializeRecoverDevice(
             userId: currentUser.ostUserId!,
             recoverDeviceAddress: spendingLimitTestField.text!,
             userPin: expiresAfterTextField.text!,

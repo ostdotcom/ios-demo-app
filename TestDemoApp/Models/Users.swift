@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 import CryptoSwift
-import OstSdk;
+import OstWalletSdk
 
 class Users:BaseModel {
   var users: Array<User>;

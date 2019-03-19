@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import OstSdk
+import OstWalletSdk
 import AVFoundation
 import MaterialComponents
 
@@ -69,7 +69,7 @@ class ScanQRCodeView: BaseWalletWorkflowView, AVCaptureMetadataOutputObjectsDele
             return;
         }
         let currentUser = CurrentUser.getInstance();
-        OstSdk.performQRAction(userId: currentUser.ostUserId!,
+        OstWalletSdk.performQRAction(userId: currentUser.ostUserId!,
                        payload: qrCode!,
                        delegate: self.sdkInteract)
         

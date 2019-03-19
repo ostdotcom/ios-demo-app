@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import OstSdk
+import OstWalletSdk
 import MaterialComponents
 class AddDeviceWithMnemonics: BaseWalletWorkflowView {
 
@@ -22,7 +22,7 @@ class AddDeviceWithMnemonics: BaseWalletWorkflowView {
         super.didTapNext(sender: sender);
         let currentUser = CurrentUser.getInstance();
         let mnemonics = wordsTextView.text!.components(separatedBy: " ")
-        OstSdk.addDeviceUsingMnemonics(userId: currentUser.ostUserId!,
+        OstWalletSdk.addDeviceUsingMnemonics(userId: currentUser.ostUserId!,
                                       mnemonics: mnemonics,
                                       delegate: self.sdkInteract)
   }

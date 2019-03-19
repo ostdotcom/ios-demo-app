@@ -15,7 +15,7 @@
  */
 
 import UIKit
-import OstSdk
+import OstWalletSdk
 import MaterialComponents
 
 class LoginViewController: UIViewController {

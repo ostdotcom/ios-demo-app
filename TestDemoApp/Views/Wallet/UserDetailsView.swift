@@ -8,7 +8,7 @@
 
 import UIKit
 import MaterialComponents
-import OstSdk
+import OstWalletSdk
 
 class UserDetailsView: BaseWalletWorkflowView {
 
@@ -153,7 +153,9 @@ class UserDetailsView: BaseWalletWorkflowView {
         super.viewDidAppearCallback();
         fillData();
         let currentUser = CurrentUser.getInstance();
-        OstSdk.setupDevice(userId: currentUser.ostUserId!, tokenId: currentUser.tokenId!, delegate: self.sdkInteract);
+        OstWalletSdk.setupDevice(userId: currentUser.ostUserId!,
+                                 tokenId: currentUser.tokenId!,
+                                 delegate: self.sdkInteract);
     }
 
     override func receivedSdkEvent(eventData: [String : Any]) {
@@ -175,7 +177,7 @@ class UserDetailsView: BaseWalletWorkflowView {
     func fillData() {
         do {
             let currentUser = CurrentUser.getInstance();
-            let ostUser = try OstSdk.getUser(currentUser.ostUserId!)
+            let ostUser = try OstWalletSdk.getUser(currentUser.ostUserId!)
             let ostCurrentDevice = ostUser!.getCurrentDevice()
             
             userIdTF.text = ostUser?.id;

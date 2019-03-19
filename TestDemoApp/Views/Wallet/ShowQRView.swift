@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import OstSdk
+import OstWalletSdk
 
 class ShowQRView: BaseWalletWorkflowView {
 
@@ -20,7 +20,9 @@ class ShowQRView: BaseWalletWorkflowView {
         self.errorLabel.text = "";
         self.successLabel.text = "";
         self.nextButton.isHidden = true;
-        OstSdk.setupDevice(userId: currentUser.id, tokenId: currentUser.tokenId!, delegate: self.sdkInteract);
+        OstWalletSdk.setupDevice(userId: currentUser.id,
+                                 tokenId: currentUser.tokenId!,
+                                 delegate: self.sdkInteract);
     }
     
     override func receivedSdkEvent(eventData: [String : Any]) {
@@ -142,9 +144,9 @@ class ShowQRView: BaseWalletWorkflowView {
     override func viewDidAppearCallback() {
         super.viewDidAppearCallback();
         let currentUser = CurrentUser.getInstance();
-        //        OstSdk.addDevice(userId: currentUser.ostUserId!, delegate: self.sdkInteract)
+        //        OstWalletSdk.addDevice(userId: currentUser.ostUserId!, delegate: self.sdkInteract)
         do {
-            guard let qrCode = try OstSdk.getAddDeviceQRCode(userId: currentUser.ostUserId!) else {
+            guard let qrCode = try OstWalletSdk.getAddDeviceQRCode(userId: currentUser.ostUserId!) else {
                 return
             }
             let multiplyingFactor = (qrCodeImageView.frame.height/100)

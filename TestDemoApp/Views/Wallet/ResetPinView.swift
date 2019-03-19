@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import OstSdk
+import OstWalletSdk
 
 class ResetPinView: AddSessionView {
     
@@ -16,7 +16,7 @@ class ResetPinView: AddSessionView {
 //        super.didTapNext(sender: sender)
         let currentUser = CurrentUser.getInstance()
         
-        OstSdk.resetPin(userId: currentUser.ostUserId!,
+        OstWalletSdk.resetPin(userId: currentUser.ostUserId!,
                         passphrasePrefix: currentUser.userPinSalt!,
                         oldUserPin: spendingLimitTestField.text!,
                         newUserPin: expiresAfterTextField.text!,

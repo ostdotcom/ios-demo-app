@@ -7,14 +7,14 @@
 //
 
 import UIKit
-import OstSdk
+import OstWalletSdk
 
 class AbortRevocerDeviceView: RecoverDeviceView {
 
     override func recoverDevice() {
         let currentUser = CurrentUser.getInstance()
         //TODO: Future work
-//        OstSdk.abortRecoverDevice(
+//        OstWalletSdk.abortRecoverDevice(
 //            userId: currentUser.ostUserId!,
 //            uPin: spendingLimitTestField.text!,
 //            password: currentUser.userPinSalt!,
