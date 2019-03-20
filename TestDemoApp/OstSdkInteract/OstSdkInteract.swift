@@ -10,7 +10,7 @@ import Foundation
 import OstWalletSdk
 import MaterialComponents
 
-class OstSdkInteract: BaseModel, OstWorkFlowCallbackDelegate {
+class OstSdkInteract: BaseModel, OstWorkflowDelegate {
     
     typealias OstSdkInteractEventHandler = ([String:Any]) -> ()
     
@@ -146,13 +146,6 @@ extension OstSdkInteract {
         self.fireEvent(eventData: eventData);
     }
 
-    func showPaperWallet(mnemonics: [String]) {
-        var eventData:[String : Any] = [:];
-        eventData["eventType"] = WorkflowEventType.showPaperWallet;
-        eventData["mnemonics"] = mnemonics;
-        self.fireEvent(eventData: eventData);
-    }
-    
     func verifyData(workflowContext: OstWorkflowContext,
                     ostContextEntity: OstContextEntity,
                     delegate: OstValidateDataDelegate) {

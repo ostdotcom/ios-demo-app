@@ -19,7 +19,7 @@ class RecoverDeviceView: AddSessionView {
     
     func recoverDevice() {
         let currentUser = CurrentUser.getInstance()
-        OstWalletSdk.initializeRecoverDevice(
+        OstWalletSdk.initiateDeviceRecovery(
             userId: currentUser.ostUserId!,
             recoverDeviceAddress: spendingLimitTestField.text!,
             userPin: expiresAfterTextField.text!,
