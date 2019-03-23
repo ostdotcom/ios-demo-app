@@ -22,9 +22,10 @@ class AddDeviceWithMnemonics: BaseWalletWorkflowView {
         super.didTapNext(sender: sender);
         let currentUser = CurrentUser.getInstance();
         let mnemonics = wordsTextView.text!.components(separatedBy: " ")
-        OstWalletSdk.addDeviceUsingMnemonics(userId: currentUser.ostUserId!,
-                                      mnemonics: mnemonics,
-                                      delegate: self.sdkInteract)
+        OstWalletSdk.authorizeCurrentDeviceWithMnemonics(
+            userId: currentUser.ostUserId!,
+            mnemonics: mnemonics,
+            delegate: self.sdkInteract)
   }
   // Mark - Sub Views
   let logoImageView: UIImageView = {

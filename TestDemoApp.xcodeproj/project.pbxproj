@@ -48,6 +48,7 @@
 		4BF8FE382240FD1400519779 /* ApplicationScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8FE162240FD1400519779 /* ApplicationScheme.swift */; };
 		4BF8FE3D2241004700519779 /* OstWalletSdk.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FE3C2241004600519779 /* OstWalletSdk.plist */; };
 		4BF8FE41224143C900519779 /* OstWalletSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF8FE40224143C900519779 /* OstWalletSdk.framework */; };
+		4BF8FE582244FA0E00519779 /* OstLogoutAllSessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8FE572244FA0E00519779 /* OstLogoutAllSessions.swift */; };
 		4C76341ED1B2AFC426F2613F /* Pods_TestDemoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4227211CBE18A5739941717C /* Pods_TestDemoAppTests.framework */; };
 		C4E21A473481A1127AE9A57D /* Pods_TestDemoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55314AD4EBC4EEEC1C6D5BA4 /* Pods_TestDemoAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -120,6 +121,7 @@
 		4BF8FE3A2240FF0900519779 /* OstSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OstSdk.framework; path = Carthage/Build/iOS/OstSdk.framework; sourceTree = "<group>"; };
 		4BF8FE3C2241004600519779 /* OstWalletSdk.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OstWalletSdk.plist; sourceTree = "<group>"; };
 		4BF8FE40224143C900519779 /* OstWalletSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OstWalletSdk.framework; path = Carthage/Build/iOS/OstWalletSdk.framework; sourceTree = "<group>"; };
+		4BF8FE572244FA0E00519779 /* OstLogoutAllSessions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OstLogoutAllSessions.swift; sourceTree = "<group>"; };
 		529214F8DA75A200DC090531 /* Pods-TestDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemoApp.release.xcconfig"; path = "Target Support Files/Pods-TestDemoApp/Pods-TestDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		55314AD4EBC4EEEC1C6D5BA4 /* Pods_TestDemoAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestDemoAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E0A0F4E51DA07B1DABA9317 /* Pods-TestDemoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemoAppTests.release.xcconfig"; path = "Target Support Files/Pods-TestDemoAppTests/Pods-TestDemoAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 				4BF8FE132240FD1400519779 /* ScanQRCodeView.swift */,
 				4BF8FE142240FD1400519779 /* PaperWalletView.swift */,
 				4BF8FE152240FD1400519779 /* BaseWalletView.swift */,
+				4BF8FE572244FA0E00519779 /* OstLogoutAllSessions.swift */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				4BF8FE382240FD1400519779 /* ApplicationScheme.swift in Sources */,
 				4BF8FE2F2240FD1400519779 /* RecoverDeviceView.swift in Sources */,
 				4BF8FE2B2240FD1400519779 /* ResetPinView.swift in Sources */,
+				4BF8FE582244FA0E00519779 /* OstLogoutAllSessions.swift in Sources */,
 				4BF8FE372240FD1400519779 /* BaseWalletView.swift in Sources */,
 				4BF8FE362240FD1400519779 /* PaperWalletView.swift in Sources */,
 				4BF8FE242240FD1400519779 /* Shapes.swift in Sources */,
@@ -819,7 +823,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pepo.TestDemoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ost.demoapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -843,7 +847,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pepo.TestDemoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ost.demoapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -21,8 +21,8 @@ class PaperWalletView: BaseWalletWorkflowView {
   @objc override func didTapNext(sender: Any) {
     super.didTapNext(sender: sender);
     let currentUser = CurrentUser.getInstance();
-    OstWalletSdk.getPaperWallet(userId: currentUser.ostUserId!,
-                                delegate: self.sdkInteract);
+    OstWalletSdk.getDeviceMnemonics(userId: currentUser.ostUserId!,
+                                    delegate: self.sdkInteract)
   }
   // Mark - Sub Views
   let logoImageView: UIImageView = {
@@ -103,14 +103,12 @@ class PaperWalletView: BaseWalletWorkflowView {
   override func receivedSdkEvent(eventData: [String : Any]) {
     super.receivedSdkEvent(eventData: eventData);
     let eventType:OstSdkInteract.WorkflowEventType = eventData["eventType"] as! OstSdkInteract.WorkflowEventType;
-    if ( OstSdkInteract.WorkflowEventType.showPaperWallet != eventType ) {
+    if ( OstSdkInteract.WorkflowEventType.flowComplete != eventType ) {
       return;
     }
-    
-    guard let mnemonics:[String] = eventData["mnemonics"] as? [String] else {
-        return;
-    }
-    let wordsToShow:String = mnemonics.joined(separator: " ");
+    let ostContextEntity: OstContextEntity = eventData["ostContextEntity"] as! OstContextEntity
+
+    let wordsToShow:String = (ostContextEntity.entity as! [String]).joined(separator: " ");
     self.wordsTextView.text = wordsToShow;
     self.nextButton.isHidden = true;
     self.cancelButton.isHidden = true;
