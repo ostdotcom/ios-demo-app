@@ -34,6 +34,7 @@ class WalletViewController: UIViewController {
     case RECOVER_DEVICE
     case ABORT_RECOVER_DEVICE
     case SHOW_USER_DETAILS
+    case LOGOUT_ALL_SESSIONS
   }
   
   var isLoginMode:Bool = true;
@@ -142,6 +143,9 @@ class WalletViewController: UIViewController {
     case ViewMode.ABORT_RECOVER_DEVICE:
         self.title = "Abort Recover device"
         return AbortRevocerDeviceView()
+    case ViewMode.LOGOUT_ALL_SESSIONS:
+        self.title = "Logout All Sessions"
+        return OstLogoutAllSessions()
     }
   }
   

@@ -29,6 +29,7 @@ class UserActionsViewController: UICollectionViewController, UICollectionViewDel
     case recoverDevice = "recoverDevice"
     case abortRecoverDevice = "abortRecoverDevice"
     case showUserDetails = "showUserDetails"
+    case logoutAllSessions = "logoutAllSessions"
   }
   
   var dataItems:[[String:String]]?
@@ -47,6 +48,7 @@ class UserActionsViewController: UICollectionViewController, UICollectionViewDel
     var abortRecoverDevice: [String: String] = [:]
     var scanQRCode: [String: String] = [:];
     var showUserDetails: [String: String] = [:]
+    var logoutAllSessions: [String: String] = [:]
     
     showUserDetails[ACTION_TYPE] = ACTIONS.showUserDetails.rawValue;
     showUserDetails[ACTION_TEXT] = "Show Details"
@@ -79,6 +81,9 @@ class UserActionsViewController: UICollectionViewController, UICollectionViewDel
     abortRecoverDevice[ACTION_TYPE] = ACTIONS.abortRecoverDevice.rawValue
     abortRecoverDevice[ACTION_TEXT] = "Abort Recover device"
     
+    logoutAllSessions[ACTION_TYPE] = ACTIONS.logoutAllSessions.rawValue
+    logoutAllSessions[ACTION_TEXT] = "Logout All Sessions"
+    
     if ( userDevice.isStatusAuthorizing ) {
         addSession[ACTION_DETAILS] = "Likely to fail as device is authorizing.";
         scanQRCode[ACTION_DETAILS] = "Likely to fail as device is authorizing.";
@@ -87,6 +92,7 @@ class UserActionsViewController: UICollectionViewController, UICollectionViewDel
         abortRecoverDevice[ACTION_DETAILS] = "Likely to fail as device is authorizing.";
         showAddDeviceCode[ACTION_DETAILS] = "Likely to fail as device is authorizing.";
         showAddDeviceWithMnemonics[ACTION_DETAILS] = "Authorize this device by providing Mnemonics.";
+        logoutAllSessions[ACTION_DETAILS] = "Logout from device"
     } else if ( userDevice.isStatusAuthorized ) {
         addSession[ACTION_DETAILS] = "Create session a new session.";
         scanQRCode[ACTION_DETAILS] = "Perform transactions and Authorize devices by scanning QR code.";
@@ -95,6 +101,7 @@ class UserActionsViewController: UICollectionViewController, UICollectionViewDel
         abortRecoverDevice[ACTION_DETAILS] = "Likely to fail as device is authorized.";
         showAddDeviceWithMnemonics[ACTION_DETAILS] = "Likely to fail as device is already authorized.";
         showAddDeviceCode[ACTION_DETAILS] = "Likely to fail as device is already authorized.";
+        logoutAllSessions[ACTION_DETAILS] = "Logout from device"
     } else if ( userDevice.isStatusRegistered ) {
         addSession[ACTION_DETAILS] = "Likely to fail as device is not authorized";
         scanQRCode[ACTION_DETAILS] = "Likely to fail as device is not authorized";
@@ -103,6 +110,7 @@ class UserActionsViewController: UICollectionViewController, UICollectionViewDel
         abortRecoverDevice[ACTION_DETAILS] = "Likely to fail as device is Registered.";
         showAddDeviceCode[ACTION_DETAILS] = "Authorize this device by scanning the QR code.";
         showAddDeviceWithMnemonics[ACTION_DETAILS] = "Authorize this device by providing Mnemonics.";
+        logoutAllSessions[ACTION_DETAILS] = "Likely to fail as device is Registered."
     } else if ( userDevice.isStatusRevoked ) {
         addSession[ACTION_DETAILS] = "Likely to fail as device is revoked.";
         scanQRCode[ACTION_DETAILS] = "Likely to fail as device is revoked.";
@@ -111,6 +119,7 @@ class UserActionsViewController: UICollectionViewController, UICollectionViewDel
         abortRecoverDevice[ACTION_DETAILS] = "Likely to fail as device is revoked.";
         showAddDeviceCode[ACTION_DETAILS] = "Likely to fail as device is revoked.";
         showAddDeviceWithMnemonics[ACTION_DETAILS] = "Likely to fail as device is revoked.";
+        logoutAllSessions[ACTION_DETAILS] = "Likely to fail as device is revoked."
     }
     
     paperWallet[ACTION_DETAILS] = "See your paper wallet.";
@@ -126,7 +135,7 @@ class UserActionsViewController: UICollectionViewController, UICollectionViewDel
     //Add back sendTransaction later on.
     //Final Ordering.
     dataItems = [showUserDetails, setupWallet, paperWallet, addSession, scanQRCode,
-                 showAddDeviceCode, showAddDeviceWithMnemonics, resetPin, recoverDevice];
+                 showAddDeviceCode, showAddDeviceWithMnemonics, resetPin, recoverDevice,abortRecoverDevice];
   }
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated);
@@ -301,6 +310,12 @@ class UserActionsViewController: UICollectionViewController, UICollectionViewDel
         else if ( actionType.caseInsensitiveCompare(ACTIONS.abortRecoverDevice.rawValue) == .orderedSame ) {
             let walletController = WalletViewController(nibName: nil, bundle: nil);
             walletController.viewMode = WalletViewController.ViewMode.ABORT_RECOVER_DEVICE;
+            self.present(walletController, animated: true, completion: nil);
+        }
+        
+        else if ( actionType.caseInsensitiveCompare(ACTIONS.logoutAllSessions.rawValue) == .orderedSame ) {
+            let walletController = WalletViewController(nibName: nil, bundle: nil);
+            walletController.viewMode = WalletViewController.ViewMode.LOGOUT_ALL_SESSIONS;
             self.present(walletController, animated: true, completion: nil);
         }
     }
