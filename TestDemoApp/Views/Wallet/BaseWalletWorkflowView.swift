@@ -43,17 +43,17 @@ class BaseWalletWorkflowView: BaseWalletView {
             
             if ( workFlowType == .activateUser ) {
                 self.successLabel.text = "Great! Your wallet has been setup."
-            } else if ( workFlowType == .addDevice ) {
+            } else if ( workFlowType == .authorizeDeviceWithQRCode ) {
                 self.successLabel.text = "This device has been authorized."
             } else if ( workFlowType == .addSession ) {
                 self.successLabel.text = "The session on this device has been authorized."
-            } else if ( workFlowType == .getPaperWallet ) {
+            } else if ( workFlowType == .getDeviceMnemonics ) {
                 self.successLabel.text = "Please note down these words."
             } else if ( workFlowType == .setupDevice ) {
                 self.successLabel.text = "This device has been registered."
             } else if ( workFlowType == .resetPin ) {
                 self.successLabel.text = "Pin reset successfully."
-            } else if ( workFlowType == .recoverDevice ) {
+            } else if ( workFlowType == .initiateDeviceRecovery ) {
                 self.successLabel.text = "Recover device successfully."
             }
             
