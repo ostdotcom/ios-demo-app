@@ -286,15 +286,15 @@ class ScanQRCodeView: BaseWalletWorkflowView, AVCaptureMetadataOutputObjectsDele
         let eventType:OstSdkInteract.WorkflowEventType = eventData["eventType"] as! OstSdkInteract.WorkflowEventType;
         if (.flowInterrupt == eventType ) {
             let interuptedWorkflowContext = eventData["workflowContext"] as! OstWorkflowContext;
-            if ( interuptedWorkflowContext.workflowType == .scanQRCode ) {
+            if ( interuptedWorkflowContext.workflowType == .performQRAction ) {
                 //Show invalid QR Code.
                 let error: OstError = eventData["ostError"] as! OstError
                 showInvalidQRCode(error.errorMessage);
                 
                 // Done.
                 return;
-            } else if ( interuptedWorkflowContext.workflowType == .addDeviceWithQRCode ||
-                        interuptedWorkflowContext.workflowType == .addDeviceWithMnemonics) {
+            } else if ( interuptedWorkflowContext.workflowType == .authorizeDeviceWithQRCode ||
+                        interuptedWorkflowContext.workflowType == .authorizeDeviceWithMnemonics) {
                 // Forward it to base class.
                 super.receivedSdkEvent(eventData: eventData);
                 
@@ -312,9 +312,9 @@ class ScanQRCodeView: BaseWalletWorkflowView, AVCaptureMetadataOutputObjectsDele
         }
         else if (.flowComplete == eventType ) {
             let completedWorkflowContext = eventData["workflowContext"] as! OstWorkflowContext;
-            if ( completedWorkflowContext.workflowType == .scanQRCode
-                || completedWorkflowContext.workflowType == .addDeviceWithQRCode
-                || completedWorkflowContext.workflowType == .addDeviceWithMnemonics ) {
+            if ( completedWorkflowContext.workflowType == .performQRAction
+                || completedWorkflowContext.workflowType == .authorizeDeviceWithQRCode
+                || completedWorkflowContext.workflowType == .authorizeDeviceWithMnemonics ) {
                 
                 // Forward it to base class.
                 super.receivedSdkEvent(eventData: eventData);
@@ -340,19 +340,21 @@ class ScanQRCodeView: BaseWalletWorkflowView, AVCaptureMetadataOutputObjectsDele
         let workflowContext = eventData["workflowContext"] as! OstWorkflowContext;
         let ostContextEntity = eventData["ostContextEntity"] as! OstContextEntity;
         self.ostValidateDataProtocol = eventData["delegate"] as? OstValidateDataDelegate;
-        if ( workflowContext.workflowType == .addDeviceWithQRCode
-            || workflowContext.workflowType == .addDeviceWithMnemonics) {
+        if ( workflowContext.workflowType == .authorizeDeviceWithQRCode
+            || workflowContext.workflowType == .authorizeDeviceWithMnemonics
+            || workflowContext.workflowType == .revokeDeviceWithQRCode) {
+            
             let device = ostContextEntity.entity as! OstDevice;
             showAuthorizeDeviceInfo(ostDevice: device);
         } else if ( workflowContext.workflowType == .executeTransaction ) {
             //To-Do: Show transaction info.
             let entity = ostContextEntity.entity as! [String: Any]
             
-            let tokenHolderAddresses = entity["addresses"] as! [String]
+            let tokenHolderAddresses = entity["token_holder_addresses"] as! [String]
             let amounts = entity["amounts"]  as! [String]
             
             var stringToConfirm: String = ""
-            stringToConfirm += "rule name : \(entity["ruleName"] as! String)"
+            stringToConfirm += "rule name : \(entity["rule_name"] as! String)"
             
             for (i, address) in tokenHolderAddresses.enumerated() {
                 stringToConfirm += "\n\(address): \(amounts[i])"

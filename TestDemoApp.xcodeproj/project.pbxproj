@@ -49,6 +49,24 @@
 		4BF8FE3D2241004700519779 /* OstWalletSdk.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FE3C2241004600519779 /* OstWalletSdk.plist */; };
 		4BF8FE41224143C900519779 /* OstWalletSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF8FE40224143C900519779 /* OstWalletSdk.framework */; };
 		4BF8FE582244FA0E00519779 /* OstLogoutAllSessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8FE572244FA0E00519779 /* OstLogoutAllSessions.swift */; };
+		4BF8FEEA22491F9300519779 /* Testnet-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FEE722491F9200519779 /* Testnet-Info.plist */; };
+		4BF8FEEB22491F9300519779 /* Testnet-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FEE722491F9200519779 /* Testnet-Info.plist */; };
+		4BF8FEEC22491F9300519779 /* Testnet-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FEE722491F9200519779 /* Testnet-Info.plist */; };
+		4BF8FEED22491F9300519779 /* Testnet-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FEE722491F9200519779 /* Testnet-Info.plist */; };
+		4BF8FEEE22491F9300519779 /* Testnet-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FEE722491F9200519779 /* Testnet-Info.plist */; };
+		4BF8FEEF22491F9300519779 /* Testnet-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FEE722491F9200519779 /* Testnet-Info.plist */; };
+		4BF8FEF022491F9300519779 /* Development-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FEE822491F9200519779 /* Development-Info.plist */; };
+		4BF8FEF122491F9300519779 /* Development-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FEE822491F9200519779 /* Development-Info.plist */; };
+		4BF8FEF222491F9300519779 /* Development-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FEE822491F9200519779 /* Development-Info.plist */; };
+		4BF8FEF322491F9300519779 /* Development-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FEE822491F9200519779 /* Development-Info.plist */; };
+		4BF8FEF422491F9300519779 /* Development-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FEE822491F9200519779 /* Development-Info.plist */; };
+		4BF8FEF522491F9300519779 /* Development-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FEE822491F9200519779 /* Development-Info.plist */; };
+		4BF8FEF622491F9300519779 /* Staging-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FEE922491F9200519779 /* Staging-Info.plist */; };
+		4BF8FEF722491F9300519779 /* Staging-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FEE922491F9200519779 /* Staging-Info.plist */; };
+		4BF8FEF822491F9300519779 /* Staging-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FEE922491F9200519779 /* Staging-Info.plist */; };
+		4BF8FEF922491F9300519779 /* Staging-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FEE922491F9200519779 /* Staging-Info.plist */; };
+		4BF8FEFA22491F9300519779 /* Staging-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FEE922491F9200519779 /* Staging-Info.plist */; };
+		4BF8FEFB22491F9300519779 /* Staging-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8FEE922491F9200519779 /* Staging-Info.plist */; };
 		4C76341ED1B2AFC426F2613F /* Pods_TestDemoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4227211CBE18A5739941717C /* Pods_TestDemoAppTests.framework */; };
 		C4E21A473481A1127AE9A57D /* Pods_TestDemoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55314AD4EBC4EEEC1C6D5BA4 /* Pods_TestDemoAppUITests.framework */; };
 		ECA501042248F98A00D84810 /* BaseWalletWorkflowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8FE0B2240FD1400519779 /* BaseWalletWorkflowView.swift */; };
@@ -242,6 +260,9 @@
 		4BF8FE3C2241004600519779 /* OstWalletSdk.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OstWalletSdk.plist; sourceTree = "<group>"; };
 		4BF8FE40224143C900519779 /* OstWalletSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OstWalletSdk.framework; path = Carthage/Build/iOS/OstWalletSdk.framework; sourceTree = "<group>"; };
 		4BF8FE572244FA0E00519779 /* OstLogoutAllSessions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OstLogoutAllSessions.swift; sourceTree = "<group>"; };
+		4BF8FEE722491F9200519779 /* Testnet-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Testnet-Info.plist"; sourceTree = "<group>"; };
+		4BF8FEE822491F9200519779 /* Development-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Development-Info.plist"; sourceTree = "<group>"; };
+		4BF8FEE922491F9200519779 /* Staging-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Staging-Info.plist"; sourceTree = "<group>"; };
 		529214F8DA75A200DC090531 /* Pods-TestDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemoApp.release.xcconfig"; path = "Target Support Files/Pods-TestDemoApp/Pods-TestDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		55314AD4EBC4EEEC1C6D5BA4 /* Pods_TestDemoAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestDemoAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E0A0F4E51DA07B1DABA9317 /* Pods-TestDemoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemoAppTests.release.xcconfig"; path = "Target Support Files/Pods-TestDemoAppTests/Pods-TestDemoAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -249,11 +270,8 @@
 		9414360E554341F818416A89 /* Pods_TestDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD3C43B22B7EA11E2F62572 /* Pods-TestDemoAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemoAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestDemoAppUITests/Pods-TestDemoAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ECA501332248F98A00D84810 /* TestDemoAppStaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDemoAppStaging.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECA501342248F98A00D84810 /* Staging-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Staging-Info.plist"; path = "/Users/deepeshkn/Documents/workspace/OST/iOS/ios-demo-app/Staging-Info.plist"; sourceTree = "<absolute>"; };
 		ECA501672248F9A500D84810 /* TestDemoAppDevelopment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDemoAppDevelopment.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECA501682248F9A500D84810 /* Development-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Development-Info.plist"; path = "/Users/deepeshkn/Documents/workspace/OST/iOS/ios-demo-app/Development-Info.plist"; sourceTree = "<absolute>"; };
 		ECA5019B2248F9F300D84810 /* TestDemoAppTestnet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDemoAppTestnet.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECA5019C2248F9F300D84810 /* Testnet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Testnet-Info.plist"; path = "/Users/deepeshkn/Documents/workspace/OST/iOS/ios-demo-app/Testnet-Info.plist"; sourceTree = "<absolute>"; };
 		F904DB8F6D28F79D1180FC74 /* Pods-TestDemoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-TestDemoAppUITests/Pods-TestDemoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -316,15 +334,15 @@
 		4BF8FDAF2240FA7600519779 = {
 			isa = PBXGroup;
 			children = (
+				4BF8FEE822491F9200519779 /* Development-Info.plist */,
+				4BF8FEE922491F9200519779 /* Staging-Info.plist */,
+				4BF8FEE722491F9200519779 /* Testnet-Info.plist */,
 				4BF8FDBA2240FA7600519779 /* TestDemoApp */,
 				4BF8FDCF2240FA7700519779 /* TestDemoAppTests */,
 				4BF8FDDA2240FA7700519779 /* TestDemoAppUITests */,
 				4BF8FDB92240FA7600519779 /* Products */,
 				CA15A6D66D10D87C383C927C /* Pods */,
 				DB91270CD9213E4763882444 /* Frameworks */,
-				ECA501342248F98A00D84810 /* Staging-Info.plist */,
-				ECA501682248F9A500D84810 /* Development-Info.plist */,
-				ECA5019C2248F9F300D84810 /* Testnet-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -687,6 +705,9 @@
 				4BF8FE202240FD1400519779 /* LICENSE in Resources */,
 				4BF8FE3D2241004700519779 /* OstWalletSdk.plist in Resources */,
 				4BF8FE1E2240FD1400519779 /* Main.storyboard in Resources */,
+				4BF8FEF022491F9300519779 /* Development-Info.plist in Resources */,
+				4BF8FEEA22491F9300519779 /* Testnet-Info.plist in Resources */,
+				4BF8FEF622491F9300519779 /* Staging-Info.plist in Resources */,
 				4BF8FE232240FD1400519779 /* README.md in Resources */,
 				4BF8FE1C2240FD1400519779 /* Assets.xcassets in Resources */,
 			);
@@ -696,6 +717,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BF8FEFA22491F9300519779 /* Staging-Info.plist in Resources */,
+				4BF8FEF422491F9300519779 /* Development-Info.plist in Resources */,
+				4BF8FEEE22491F9300519779 /* Testnet-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +727,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BF8FEFB22491F9300519779 /* Staging-Info.plist in Resources */,
+				4BF8FEF522491F9300519779 /* Development-Info.plist in Resources */,
+				4BF8FEEF22491F9300519779 /* Testnet-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,6 +741,9 @@
 				ECA501292248F98A00D84810 /* LICENSE in Resources */,
 				ECA5012A2248F98A00D84810 /* OstWalletSdk.plist in Resources */,
 				ECA5012B2248F98A00D84810 /* Main.storyboard in Resources */,
+				4BF8FEF122491F9300519779 /* Development-Info.plist in Resources */,
+				4BF8FEEB22491F9300519779 /* Testnet-Info.plist in Resources */,
+				4BF8FEF722491F9300519779 /* Staging-Info.plist in Resources */,
 				ECA5012C2248F98A00D84810 /* README.md in Resources */,
 				ECA5012D2248F98A00D84810 /* Assets.xcassets in Resources */,
 			);
@@ -727,6 +757,9 @@
 				ECA5015D2248F9A500D84810 /* LICENSE in Resources */,
 				ECA5015E2248F9A500D84810 /* OstWalletSdk.plist in Resources */,
 				ECA5015F2248F9A500D84810 /* Main.storyboard in Resources */,
+				4BF8FEF222491F9300519779 /* Development-Info.plist in Resources */,
+				4BF8FEEC22491F9300519779 /* Testnet-Info.plist in Resources */,
+				4BF8FEF822491F9300519779 /* Staging-Info.plist in Resources */,
 				ECA501602248F9A500D84810 /* README.md in Resources */,
 				ECA501612248F9A500D84810 /* Assets.xcassets in Resources */,
 			);
@@ -740,6 +773,9 @@
 				ECA501912248F9F300D84810 /* LICENSE in Resources */,
 				ECA501922248F9F300D84810 /* OstWalletSdk.plist in Resources */,
 				ECA501932248F9F300D84810 /* Main.storyboard in Resources */,
+				4BF8FEF322491F9300519779 /* Development-Info.plist in Resources */,
+				4BF8FEED22491F9300519779 /* Testnet-Info.plist in Resources */,
+				4BF8FEF922491F9300519779 /* Staging-Info.plist in Resources */,
 				ECA501942248F9F300D84810 /* README.md in Resources */,
 				ECA501952248F9F300D84810 /* Assets.xcassets in Resources */,
 			);
