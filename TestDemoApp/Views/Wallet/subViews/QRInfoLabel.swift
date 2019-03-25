@@ -19,11 +19,9 @@ class QRInfoLabel: UILabel {
     }
     */
     public func showDeviceInfo(ostDevice:OstDevice) {
-        let deviceName = ostDevice.deviceName!;
         let deviceAddress = ostDevice.address!;
         self.numberOfLines = 0;
         self.text = " Would you like to authorize this Device? \n"
-            + "\n - Device Name: '" + deviceName + "'"
             + "\n - Address:" + deviceAddress
             + "\n\n\n *If you do not own the device, do not authorize it."
             + " Authorized devices can spend tokens, authorize other devices and"
