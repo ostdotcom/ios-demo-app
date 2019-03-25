@@ -10,19 +10,15 @@ import Foundation
 import Alamofire
 
 class BaseModel {
-
-    //Use this while creating build.
-//    static let MAPPY_APP_SERVER_URL = "https://s7-mappy.stagingost.com/api";
-//    static let KIT_API_ENDPOINT = "https://s7-api.stagingost.com/testnet/v2";
     
-    static let MAPPY_APP_SERVER_URL = "https://s5-mappy.stagingost.com/api";
-    static let KIT_API_ENDPOINT = "https://s6-api.stagingost.com/testnet/v2";
+    static let MAPPY_APP_SERVER_URL = Bundle.main.infoDictionary!["MAPPY_APP_SERVER_URL"] as! String
+    static let KIT_API_ENDPOINT = Bundle.main.infoDictionary!["KIT_API_ENDPOINT"] as! String
     
   static let TOKEN_ID = "58";
   func post(resource:String, params: [String: AnyObject]?,
             onSuccess: (([String: Any]?) -> Void)?,
             onFailure: (([String: Any]?) -> Void)?) {
-    
+        
     let url = BaseModel.MAPPY_APP_SERVER_URL + resource
     
     let dataRequest = Alamofire.request(url, method: .post, parameters: params)
