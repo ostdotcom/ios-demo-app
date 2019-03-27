@@ -20,6 +20,6 @@ carthage update --platform ios
 
 ## Application Setup
 
-- Assign appropriate value for `OST_Platform_API_ENDPOINT` present in [info.plist](https://github.com/ostdotcom/ios-demo-app/blob/develop/TestDemoApp/Info.plist). 
+- Assign appropriate value for `OST_PLATFORM_API_ENDPOINT` present in [info.plist](https://github.com/ostdotcom/ios-demo-app/blob/develop/TestDemoApp/Info.plist). 
 - Assign appropriate value for `MAPPY_APP_SERVER_URL` present in [info.plist](https://github.com/ostdotcom/ios-demo-app/blob/develop/TestDemoApp/Info.plist). 
-
+- Please refer [Mappy APP API]() for setting up server to serve response in mentioned format to run the application.
