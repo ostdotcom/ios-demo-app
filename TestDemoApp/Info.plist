@@ -20,7 +20,7 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>KIT_API_ENDPOINT</key>
+	<key>OST_PLATFORM_API_ENDPOINT</key>
 	<string>https://localhost:3000/v1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
