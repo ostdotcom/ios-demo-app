@@ -21,11 +21,11 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>KIT_API_ENDPOINT</key>
-	<string>https://api.ost.com/testnet/v2</string>
+	<string>https://localhost:3000/v1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MAPPY_APP_SERVER_URL</key>
-	<string>https://sand-mappy.ost.com/api</string>
+	<string>https://localhost:8080</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Applications uses camera to scan QR-Code</string>
 	<key>NSFaceIDUsageDescription</key>
