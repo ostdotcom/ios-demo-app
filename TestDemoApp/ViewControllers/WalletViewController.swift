@@ -1,17 +1,11 @@
 /*
- Copyright 2018-present the Material Components for iOS authors. All Rights Reserved.
-
+ Copyright © 2019 OST.com Inc
+ 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
-
+ 
  http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
  */
 
 import UIKit
@@ -27,6 +21,7 @@ class WalletViewController: UIViewController {
     case SETUP_WALLET
     case ADD_DEVICE_WITH_MNEMONICS
     case NEW_SESSION
+    case EXECUTE_TRANSACTION
     case QR_CODE
     case PAPER_WALLET
     case SHOW_QR_CODE
@@ -36,6 +31,8 @@ class WalletViewController: UIViewController {
     case SHOW_USER_DETAILS
     case LOGOUT_ALL_SESSIONS
   }
+    
+  public var toUser:User? = nil
   
   var isLoginMode:Bool = true;
   //Default View Mode.
@@ -145,7 +142,12 @@ class WalletViewController: UIViewController {
         return AbortRevocerDeviceView()
     case ViewMode.LOGOUT_ALL_SESSIONS:
         self.title = "Logout All Sessions"
-        return OstLogoutAllSessions()
+        return LogoutAllSessions()
+    case ViewMode.EXECUTE_TRANSACTION:
+        self.title = "Execute Transaction"
+        let view =  SendTokensToUserView()
+        view.setToUser(toUser: toUser);
+        return view
     }
   }
   

@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Mainnet Demo App</string>
+	<string>Demo App</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,10 +20,16 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>KIT_API_ENDPOINT</key>
+	<string>https://localhost:3000/v1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MAPPY_APP_SERVER_URL</key>
+	<string>https://localhost:8080</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Applications uses camera to scan QR-Code</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Applications uses Face ID to verify your identity</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -45,9 +51,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>MAPPY_APP_SERVER_URL</key>
-	<string>http://172.16.0.144:4040/api</string>
-	<key>KIT_API_ENDPOINT</key>
-	<string>https://api.ost.com/mainnet/v2</string>
 </dict>
 </plist>
