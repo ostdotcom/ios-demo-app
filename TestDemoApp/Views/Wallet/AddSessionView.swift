@@ -1,10 +1,12 @@
-//
-//  AddSessionView.swift
-//  Demo-App
-//
-//  Created by aniket ayachit on 23/02/19.
-//  Copyright © 2019 aniket ayachit. All rights reserved.
-//
+/*
+ Copyright © 2019 OST.com Inc
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ */
 
 import UIKit
 import OstWalletSdk
@@ -15,14 +17,13 @@ class AddSessionView: BaseWalletWorkflowView, UITextFieldDelegate {
     @objc override func didTapNext(sender: Any) {
         let currentUser = CurrentUser.getInstance();
         //TODO: add session
-        if (validateSpendingLimit()) {
+
             super.didTapNext(sender: sender);
             let expireAfter = (self.expiresAfterSelectedIndex + 1) * 24 * 60 * 60;
             OstWalletSdk.addSession(userId: currentUser.ostUserId!,
-                              spendingLimitInWei: self.spendingLimitTestField.text!,
-                              expireAfterInSec: Double(expireAfter),
-                              delegate: self.sdkInteract)
-        }
+                                    spendingLimitInWei: self.spendingLimitTestField.text ?? "",
+                                    expireAfterInSec: Double(expireAfter),
+                                    delegate: self.sdkInteract)
     }
   
     // Mark - Expires After Data
@@ -180,16 +181,6 @@ class AddSessionView: BaseWalletWorkflowView, UITextFieldDelegate {
     
     @objc override func keyboardWillHide(notification: NSNotification) {
         self.contentInset = UIEdgeInsets.zero;
-    }
-    
-    func validateSpendingLimit() -> Bool {
-        if (spendingLimitTestField.text!.count < 4) {
-            spendingLimitTestFieldController!.setErrorText("Spending limit should be greater than 999",
-                                                     errorAccessibilityValue: nil);
-            return false;
-        }
-        spendingLimitTestFieldController!.setErrorText(nil,errorAccessibilityValue: nil);
-        return true;
     }
     
     var isShowingActionSheet = false;

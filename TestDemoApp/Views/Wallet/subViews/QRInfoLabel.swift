@@ -1,10 +1,12 @@
-//
-//  DeviceInfoView.swift
-//  Demo-App
-//
-//  Created by Rachin Kapoor on 26/02/19.
-//  Copyright © 2019 aniket ayachit. All rights reserved.
-//
+/*
+ Copyright © 2019 OST.com Inc
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ */
 
 import UIKit
 import OstWalletSdk
@@ -18,7 +20,7 @@ class QRInfoLabel: UILabel {
         // Drawing code
     }
     */
-    public func showDeviceInfo(ostDevice:OstDevice) {
+    public func showAuthorizeDeviceInfo(ostDevice:OstDevice) {
         let deviceAddress = ostDevice.address!;
         self.numberOfLines = 0;
         self.text = " Would you like to authorize this Device? \n"
@@ -26,6 +28,18 @@ class QRInfoLabel: UILabel {
             + "\n\n\n *If you do not own the device, do not authorize it."
             + " Authorized devices can spend tokens, authorize other devices and"
             + " can also revoke your existing devices."
+        self.sizeToFit();
+        self.textColor = UIColor.white;
+        self.superview?.backgroundColor = UIColor.init(red: 52.0/255.0, green: 68.0/255.0, blue: 91.0/255.0, alpha: 1.0);
+    }
+    
+    public func showRevokeDeviceInfo(ostDevice:OstDevice) {
+        let deviceAddress = ostDevice.address!;
+        self.numberOfLines = 0;
+        self.text = " Would you like to revoke this Device? \n"
+            + "\n - Address:" + deviceAddress
+            + "\n\n\n*Rovked devices can not spend tokens, can not authorize other devices and"
+            + " can not also revoke your existing devices."
         self.sizeToFit();
         self.textColor = UIColor.white;
         self.superview?.backgroundColor = UIColor.init(red: 52.0/255.0, green: 68.0/255.0, blue: 91.0/255.0, alpha: 1.0);
@@ -46,7 +60,6 @@ class QRInfoLabel: UILabel {
         User Status: \(ostUser?.status ?? notPresentText)
         
         Device Address: \(ostCurrentDevice?.address ?? notPresentText)
-        Device Name: \(ostCurrentDevice?.deviceName ?? notPresentText)
         Device Status: \(ostCurrentDevice?.status ?? notPresentText)
         """
         self.sizeToFit();

@@ -1,10 +1,12 @@
-//
-//  BaseWalletWorkflowView.swift
-//  Demo-App
-//
-//  Created by Rachin Kapoor on 22/02/19.
-//  Copyright © 2019 aniket ayachit. All rights reserved.
-//
+/*
+ Copyright © 2019 OST.com Inc
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ */
 
 import UIKit
 import OstWalletSdk
@@ -62,10 +64,12 @@ class BaseWalletWorkflowView: BaseWalletView {
             addToLog(log: "⚠️ Workflow Failed at " + timeStamp);
             
             let error = eventData["ostError"] as! OstError;
-            addToLog(log: "Error.localizedDescription:" + error.localizedDescription);
-            addToLog(log: "Error.message:" + error.errorMessage);
-            addToLog(log: "Error.messageTextCode:" + error.messageTextCode.rawValue);
-            addToLog(log: "Error.internalCode:" + error.internalCode);
+            addToLog(log: "\nError.isApiError: \(error.isApiError)");
+            addToLog(log: "\nError.localizedDescription: \(error.localizedDescription)");
+            addToLog(log: "\nError.message: \(error.errorMessage)");
+            addToLog(log: "\nError.messageTextCode: \(error.messageTextCode.rawValue)");
+            addToLog(log: "\nError.internalCode: \(error.internalCode)");
+            addToLog(log: "\nError.errorInfo:\n \(String(describing: error.errorInfo))");
 
             self.nextButton.isHidden = false;
             self.cancelButton.isHidden = false;
