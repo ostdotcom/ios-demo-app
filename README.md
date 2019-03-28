@@ -1,8 +1,9 @@
 # iOS Demo App
 
-## Introduction
+## Introduction 
 
-Demo App is representation of how developer can use [OstWalletSdk](https://github.com/ostdotcom/ost-wallet-sdk-ios) in their application.
+The Demo App is reference implementation of the [OstWalletSdk](https://github.com/ostdotcom/ost-wallet-sdk-ios). This App is meant to be a technical reference- please refer to [dev.ost.com](dev.ost.com) for full SDK references and workflows. 
+
 ## Dependencies
 
 ### Cocoapod 
@@ -13,7 +14,7 @@ pod install
 ```
 
 ### Carthage
-[OstWalletSdk](https://github.com/ostdotcom/ost-wallet-sdk-ios) is released under [Carthage](https://github.com/Carthage/Carthage). So, OstWalletSdk and dependencies pulled by:
+[OstWalletSdk](https://github.com/ostdotcom/ost-wallet-sdk-ios) is released under [Carthage](https://github.com/Carthage/Carthage). So, OstWalletSdk and dependencies may be pulled by:
 ```
 carthage update --platform ios
 ```
@@ -22,4 +23,4 @@ carthage update --platform ios
 
 - Assign appropriate value for `OST_PLATFORM_API_ENDPOINT` present in [info.plist](TestDemoApp/Info.plist). 
 - Assign appropriate value for `MAPPY_APP_SERVER_URL` present in [info.plist](TestDemoApp/Info.plist). 
-- Please refer [Mappy APP API](MappyServerSpecification.md) for setting up server to serve response in mentioned format to run the application.
+- Please refer to [Application Server API specifications](MappyServerSpecification.md) and set up a server to serve responses in the specified format to run the application.

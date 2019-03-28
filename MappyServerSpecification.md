@@ -1,6 +1,6 @@
 
 
-# Demo-App: Mappy Server Api Specifications 
+# Demo-App: Application Server Api Specifications 
 
 ### Create User Api Call
 
