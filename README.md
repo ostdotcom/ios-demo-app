@@ -1,6 +1,6 @@
 # iOS Demo App
 
-## Introduction
+## Introduction 
 
 Demo App is representation of how developer can use [OstWalletSdk](https://github.com/ostdotcom/ost-wallet-sdk-ios) in their application.
 ## Dependencies
