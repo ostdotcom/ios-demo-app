@@ -119,7 +119,7 @@ class SendTokensToUserView: BaseWalletWorkflowView, UITextFieldDelegate {
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.clearButtonMode = .unlessEditing
         textField.placeholderLabel.text = "Unit"
-        textField.text = "Wei";
+        textField.text = "atto BT";
         textField.clearButtonMode = UITextField.ViewMode.never
         return textField
     }()
@@ -377,8 +377,8 @@ class SendTokensToUserView: BaseWalletWorkflowView, UITextFieldDelegate {
         isShowingActionSheet = true;
         let actionSheet = UIAlertController(title: "Select Rule", message: "Select Your Transaction Rule", preferredStyle: UIAlertController.Style.actionSheet);
         
-        let directTransafer = UIAlertAction(title: "Wei [10^(-18)]", style: .default, handler: { (UIAlertAction) in
-            self.spendingUnitTextField.text = "Wei";
+        let directTransafer = UIAlertAction(title: "atto BT [10^(-18)]", style: .default, handler: { (UIAlertAction) in
+            self.spendingUnitTextField.text = "atto BT";
             self.isEthTx = false
         });
         actionSheet.addAction(directTransafer);
